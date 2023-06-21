@@ -12,3 +12,9 @@ Spring Boot,
 Thymeleaf,
 MSQL,
 
+The DnD Spellbook is an interactive web application created specifically for players of the Dungeons and Dragons role-playing game. With this application, players are able to easily view and manage the spells available for each character class. Upon entering the application's home page, users are greeted with an interface that allows them to select a character class. This choice determines which spells are displayed on the next page. App supports a wide range of classes, such as wizard, priest, sorcerer, paladin, druid, bard, etc.After selecting a character class, the user is taken to a page with a list of spells available for that particular class. Spells are arranged according to their level, making them easier to find, depending on the current level of the character. Each spell is described, containing information including its name, description, effects, range, casting time, components and the required character level to use it. Technologies used to create the project are:
+Java 17,
+Maven,
+Spring Boot,
+Thymeleaf,
+SQL Server.
