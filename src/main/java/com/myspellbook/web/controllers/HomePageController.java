@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HomePageController {
 
 
-@GetMapping("/")
-public String homePage(Model model){
-    return "homePage";
-}
+    @GetMapping("/")
+    public String homePage(Model model) {
+        model.addAttribute("firstNmae","D&D");
+               return "homePage";
+    }
 }
