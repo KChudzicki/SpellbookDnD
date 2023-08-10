@@ -1,10 +1,19 @@
 .container{
         margin: 0 auto;
     }
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
 
 /*---------------*/
 @media only screen and (max-width: 992px) {
     .container{
+        width: 90%;
+    }
+    .center{
         width: 90%;
     }
 }
@@ -12,9 +21,15 @@
     .container{
         width: 80%;
     }
+    .center{
+        width: 80%;
+    }
 }
 @media only screen and (min-width: 1200px) {
     .container{
+        width: 50%;
+    }
+    .center{
         width: 50%;
     }
 }
