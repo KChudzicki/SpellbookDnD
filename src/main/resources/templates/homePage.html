@@ -10,90 +10,23 @@
 <nav>
     <section>
         <div class="container">
-            <img alt="DnD" th:href="'/'"  th:onclick="location.href=this.getAttribute('href')" style="width: 100%; height:100px; object-fit:fill "
-                 th:src="@{/img/LogoDnD.png}">
+            <a href="/">
+                <img alt="DnD" style="width: 100%; height:100px; object-fit:fill " th:src="@{/img/LogoDnD.png}">
+            </a>
             <table>
-                <tr>
+                <tr th:each="character: ${characters}">
                     <td>
-                        <img th:wizard-href="'/wizard'" th:onclick="location.href=this.getAttribute('wizard-href')" th:src="@{/img/Wizard.png}" alt="DnD"
-                             style="width: 100%; height: 100%; object-fit: fill">
+                        <a th:href="'/spells/' + ${character.getId()}">
+                            <img
+                                    th:src="@{'/img/'+${character.getName()}+'.png'}" alt="DnD"
+                                    style="width: 100%; height: 100%; object-fit: fill"
+                            />
+                        </a>
                     </td>
-                    <td> Wizards are supreme magic-users, defined and united as a class by the spells they cast. Drawing
-                        on the subtle weave of magic that permeates the cosmos, wizards cast spells of explosive fire,
-                        arcing lightning, subtle deception, brute-force mind control, and much more.
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img th:src="@{/img/Cleric.png}" alt="DnD"
-                             style="width: 100%; height: 100%; object-fit: fill">
-                    </td>
-                    <td> Clerics are intermediaries between the mortal world and the distant planes of the gods. As
-                        varied as the gods they serve, clerics strive to embody the handiwork of their deities. No
-                        ordinary priest, a cleric is imbued with divine magic.
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img th:src="@{/img/Druid.png}" alt="DnD"
-                             style="width: 100%; height: 100%; object-fit: fill">
-                    </td>
-                    <td> Whether calling on the elemental forces of nature or emulating the creatures of the animal
-                        world, druids are an embodiment of nature's resilience, cunning, and fury. They claim no mastery
-                        over nature, but see themselves as extensions of nature's indomitable will.
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img th:src="@{/img/Bard.png}" alt="DnD"
-                             style="width: 100%; height: 100%; object-fit: fill">
-                    </td>
-                    <td> Whether scholar, skald, or scoundrel, a bard weaves magic through words and music to inspire
-                        allies, demoralize foes, manipulate minds, create illusions, and even heal wounds. The bard is a
-                        master of song, speech, and the magic they contain.
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img th:src="@{/img/Warlock.png}" alt="DnD"
-                             style="width: 100%; height: 100%; object-fit: fill">
-                    </td>
-                    <td style="font-size: larger"> Warlocks are seekers of the knowledge that lies hidden in the fabric
-                        of the multiverse. Through
-                        pacts made with mysterious beings of supernatural power, warlocks unlock magical effects both
-                        subtle and spectacular.
-                    </td>
-                </tr>
-                <td>
-                    <img th:src="@{/img/Ranger.png}" alt="DnD"
-                         style="width: 100%; height: 100%; object-fit: fill">
-                </td>
-                <td style="font-size: larger"> Far from the bustle of cities and towns, past the hedges that shelter the
-                    most distant farms from the terrors of the wild, amid the dense-packed trees of trackless forests
-                    and across wide and empty plains, rangers keep their unending watch.
-                </td>
-                </tr>
-                <td>
-                    <img th:src="@{/img/Paladin.png}" alt="DnD"
-                         style="width: 100%; height: 100%; object-fit: fill">
-                </td>
-                <td style="font-size: larger"> Whether sworn before a god's altar and the witness of a priest, in a
-                    sacred glade before nature spirits and fey beings, or in a moment of desperation and grief with the
-                    dead as the only witness, a paladin's oath is a powerful bond.
-                </td>
-                </tr>
-                <td>
-                    <img th:src="@{/img/Sorcerer.png}" alt="DnD"
-                         style="width: 100%; height: 100%; object-fit: fill">
-                </td>
-                <td style="font-size: larger"> Sorcerers carry a magical birthright conferred upon them by an exotic
-                    bloodline, some otherworldly influence, or exposure to unknown cosmic forces. No one chooses
-                    sorcery; the power chooses the sorcerer.
-                </td>
+                    <td th:text="${character.getDescription()}"></td>
                 </tr>
             </table>
         </div>
-
     </section>
 </nav>
 </body>
