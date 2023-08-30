@@ -13,7 +13,19 @@
              th:src="@{/img/LogoDnD.png}">
     </div>
     <table>
-        <tr th:each="result: ${results}">
+        <tr style="font-size: larger">
+            <td>Name</td>
+            <td>Lvl</td>
+            <td>Type</td>
+            <td>Casting Time</td>
+            <td>Range</td>
+            <td>Components</td>
+            <td>Duration</td>
+            <td>Description</td>
+            <td>Higer Level</td>
+
+        </tr>
+        <tr th:each="result: ${results}" >
             <td th:text="${result.getSpellName()}"></td>
             <td th:text="${result.getSpellLevel()}"></td>
             <td th:text="${result.getSpellType()}"></td>
@@ -27,6 +39,7 @@
 
         </tr>
     </table>
+
 </section>
 </body>
 </html>
