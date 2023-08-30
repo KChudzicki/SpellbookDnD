@@ -14,17 +14,16 @@
     </div>
     <table>
         <tr th:each="result: ${results}">
-
-            <td th:text="${result.getSpellId()}"></td>
             <td th:text="${result.getSpellName()}"></td>
             <td th:text="${result.getSpellLevel()}"></td>
+            <td th:text="${result.getSpellType()}"></td>
             <td th:text="${result.getCastingTime()}"></td>
-            <td th:text="${result.getComponents()}"></td>
             <td th:text="${result.getSpellRange()}"></td>
+            <td th:text="${result.getComponents()}"></td>
             <td th:text="${result.getDuration()}"></td>
             <td th:text="${result.getDescription()}"></td>
             <td th:text="${result.getHigherLevels()}"></td>
-            <td th:text="${result.getSpellType()}"></td>
+
 
         </tr>
     </table>
