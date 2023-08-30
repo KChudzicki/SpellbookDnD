@@ -9,9 +9,34 @@
 <body>
 <section>
     <div class="container">
-        <img alt="DnD" th:href="'/'"  th:onclick="location.href=this.getAttribute('href')" style="width: 100%; height:100px; object-fit:fill "
+        <img alt="DnD" th:href="'/'" th:onclick="location.href=this.getAttribute('href')"
+             style="width: 100%; height:100px; object-fit:fill "
              th:src="@{/img/LogoDnD.png}">
     </div>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>LvL</th>
+            <th>Type</th>
+            <th>Time</th>
+            <th>Range</th>
+            <th>components</th>
+            <th>duration</th>
+            <th>description</th>
+            <th>Higher level</th>
+        </tr>
+        <tr th:each="result: ${results}">
+            <th th:text="${result.getSpellName()}"></th>
+            <th th:text="${result.getSpellLevel()}"></th>
+            <th th:text="${result.getSpellType()}"></td>
+            <th th:text="${result.getCastingTime()}"></th>
+            <th th:text="${result.getSpellRange()}"></th>
+            <th th:text="${result.getComponents()()}"></th>
+            <th th:text="${result.getDuration()}"></th>
+            <th th:text="${result.getDescription()}"></th>
+            <th th:text="${result.getHigherLevels()}"></th>
+        </tr>
+    </table>
 </section>
 </body>
 </html>

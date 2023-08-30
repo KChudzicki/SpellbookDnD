@@ -10,11 +10,13 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Controller
 @RequiredArgsConstructor
 public class WizardSpellPageController {
+    private static final String SPELL_ATTRIBUTE_NAME = "results";
     private final SpellService spellService;
 
     @GetMapping("/spells/{classId}")
     public String wizardSpellPage(@PathVariable int classId, Model model) {
         final var result = spellService.getAllForCharacter(classId);
+        model.addAttribute(SPELL_ATTRIBUTE_NAME, result);
         return "wizard";
     }
 }

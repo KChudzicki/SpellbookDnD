@@ -1,6 +1,6 @@
 package com.myspellbook.service.spell;
 
-import com.myspellbook.model.spell.DndSpells;
+import com.myspellbook.dao.model.spell.DndSpells;
 
 import java.util.List;
 

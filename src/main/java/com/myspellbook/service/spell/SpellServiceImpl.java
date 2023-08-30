@@ -1,7 +1,7 @@
 package com.myspellbook.service.spell;
 
 import com.myspellbook.dao.spell.SpellDao;
-import com.myspellbook.model.spell.DndSpells;
+import com.myspellbook.dao.model.spell.DndSpells;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

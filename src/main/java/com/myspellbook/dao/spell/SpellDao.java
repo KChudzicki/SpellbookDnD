@@ -1,6 +1,6 @@
 package com.myspellbook.dao.spell;
 
-import com.myspellbook.model.spell.DndSpells;
+import com.myspellbook.dao.model.spell.DndSpells;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 

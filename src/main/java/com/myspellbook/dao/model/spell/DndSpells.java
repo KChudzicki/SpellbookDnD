@@ -1,11 +1,8 @@
-package com.myspellbook.model.spell;
+package com.myspellbook.dao.model.spell;
 
-import com.myspellbook.model.character.Character;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.util.Set;
 
 import static jakarta.persistence.GenerationType.IDENTITY;
 
@@ -17,11 +14,11 @@ public class DndSpells {
     @Id
     @GeneratedValue(strategy = IDENTITY)
     @Column(name = "spell_id")
-    private int spellId;
+    private Long spellId;
     @Column(name = "spell_name")
     private String spellName;
     @Column(name = "spell_level")
-    private int spellLevel;
+    private Long spellLevel;
     @Column(name = "spell_type")
     private String spellType;
     @Column(name = "casting_time")

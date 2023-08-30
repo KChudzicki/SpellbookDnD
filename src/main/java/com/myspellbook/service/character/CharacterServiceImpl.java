@@ -1,7 +1,7 @@
 package com.myspellbook.service.character;
 
 import com.myspellbook.dao.character.CharacterRepository;
-import com.myspellbook.model.character.Character;
+import com.myspellbook.dao.model.character.Character;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
