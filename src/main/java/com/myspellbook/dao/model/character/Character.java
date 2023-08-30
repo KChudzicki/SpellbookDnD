@@ -1,4 +1,4 @@
-package com.myspellbook.model.character;
+package com.myspellbook.dao.model.character;
 
 import jakarta.persistence.*;
 import lombok.Getter;
