@@ -13,9 +13,11 @@ Thymeleaf,
 MSQL,
 
 ##Instrukcja Obsługi 
-1. Na stronie domowej należy wybrać klase postaci, poprzez klikniecie na obraz wybranej klasy
-2. Wyszukanie czaru w tabeli
-3. Aby powrócić do strony domowej, należy kliknąc logo dungeons and dragons
+
+1. Przed uruchomieniem aplikacji nalezy uzupełnic dane połączenia z bazą danych w /src/main/resources/application.properties 
+2. Na stronie domowej należy wybrać klase postaci, poprzez klikniecie na obraz wybranej klasy
+3. Wyszukanie czaru w tabeli
+4. Aby powrócić do strony domowej, należy kliknąc logo dungeons and dragons
 
 The DnD Spellbook is an interactive web application created specifically for players of the Dungeons and Dragons role-playing game. With this application, players are able to easily view and manage the spells available for each character class. Upon entering the application's home page, users are greeted with an interface that allows them to select a character class. This choice determines which spells are displayed on the next page. App supports a wide range of classes, such as wizard, priest, sorcerer, paladin, druid, bard, etc.After selecting a character class, the user is taken to a page with a list of spells available for that particular class. Spells are arranged according to their level, making them easier to find, depending on the current level of the character. Each spell is described, containing information including its name, description, effects, range, casting time, components and the required character level to use it. Technologies used to create the project are:
 Java 17,
