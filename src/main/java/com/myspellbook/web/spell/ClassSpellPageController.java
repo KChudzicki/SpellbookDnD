@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
 @RequiredArgsConstructor
-public class WizardSpellPageController {
+public class ClassSpellPageController {
     private static final String CHARACTERS_ATTRIBUTE_NAME = "results";
     private final SpellService spellService;
 
