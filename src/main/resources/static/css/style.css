@@ -1,6 +1,14 @@
-.container{
-        margin: 0 auto;
-    }
+.container {
+    margin: 0 auto;
+}
+
+.table {
+    padding: 10px;
+    text-align: center;
+
+}
+
+
 .center {
     display: block;
     margin-left: auto;
@@ -10,26 +18,33 @@
 
 /*---------------*/
 @media only screen and (max-width: 992px) {
-    .container{
+    .container {
         width: 90%;
     }
-    .center{
+
+    .center {
         width: 90%;
     }
+
 }
+
 @media only screen and (min-width: 992px) {
-    .container{
+    .container {
         width: 80%;
     }
-    .center{
+
+    .center {
         width: 80%;
     }
+
 }
+
 @media only screen and (min-width: 1200px) {
-    .container{
+    .container {
         width: 50%;
     }
-    .center{
+
+    .center {
         width: 50%;
     }
 }

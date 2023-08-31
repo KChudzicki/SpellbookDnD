@@ -17,6 +17,6 @@ public class WizardSpellPageController {
     public String wizardSpellPage(@PathVariable int classId, Model model) {
         final var result = spellService.getAllForCharacter(classId);
         model.addAttribute(CHARACTERS_ATTRIBUTE_NAME, result);
-        return "wizard";
+        return "classSpellPage";
     }
 }
