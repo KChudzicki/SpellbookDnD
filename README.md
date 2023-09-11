@@ -22,7 +22,7 @@ Uruchmianie aplikacji
 
 Poruszanie się po aplikacji 
 
-1. Uruchomić w przeglądarce "http://localhost:(numer portu na ktrórym została uruchomiona aplikacjia)".
+1. Uruchomić w przeglądarce "//localhost:(numer portu na ktrórym została uruchomiona aplikacjia)".
 2. Na stronie domowej należy wybrać klase postaci, poprzez klikniecie na obraz wybranej przz siebie klasy.
 3. Wyszukanie czaru w tabeli.
 4. Aby powrócić do strony domowej, należy kliknąc logo dungeons and dragons.
