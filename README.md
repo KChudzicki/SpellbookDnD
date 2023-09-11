@@ -12,14 +12,16 @@ Spring Boot,
 Thymeleaf,
 MSQL,
 
-#Instrukcja Obsługi 
 
-##Uruchmianie aplikacji
+
+Uruchmianie aplikacji
+
 1.Sklonowac repozytorum  do InteliJ 
 2. Przed uruchomieniem aplikacji nalezy uzupełnic dane połączenia z bazą danych  /src/main/resources/application.properties. nalezy uzupełnic nastepujące pola: db.name gdzie należy podac nazwe bazy danych, db.user gdzie należy podać swoją nazwe uzytkownika oraz db.pass gdzie należy podac swoje hasło.
 3. Po wypełnieniu danych do połączenia, należy uruchomic aplkiacje "MySpellBookApplication".
 
-##Poruszanie się po aplikacji 
+Poruszanie się po aplikacji 
+
 1. Na stronie domowej należy wybrać klase postaci, poprzez klikniecie na obraz wybranej przz siebie klasy.
 2. Wyszukanie czaru w tabeli
 3. Aby powrócić do strony domowej, należy kliknąc logo dungeons and dragons
