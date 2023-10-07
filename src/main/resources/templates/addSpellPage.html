@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Wizard Spell Page</title>
+    <link rel="stylesheet" th:href="@{/css/fonts.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+<section>
+    <div class="container">
+        <a href="/">
+            <img alt="DnD" style="width: 100%; height:100px; object-fit:fill " th:src="@{/img/LogoDnD.png}">
+        </a>
+    </div>
+</section>
+<section id="order-content">
+    <form method="post" class="container">
+        <div>
+            <input type="text" placeholder="Name" class="input">
+        </div>
+        <div>
+            <select name="Lvl">
+                <option>Lvl: 0</option>
+                <option>Lvl: 1</option>
+                <option>Lvl: 2</option>
+                <option>Lvl: 3</option>
+                <option>Lvl: 4</option>
+                <option>Lvl: 5</option>
+                <option>Lvl: 6</option>
+                <option>Lvl: 7</option>
+                <option>Lvl: 8</option>
+                <option>Lvl: 8</option>
+            </select>
+
+        </div>
+        <div>
+            <input type="text" placeholder="Type" class="input">
+        </div>
+        <div>
+            <input type="text" placeholder="Casting Time" class="input">
+        </div>
+        <div>
+            <input type="text" placeholder="Range" class="input">
+        </div>
+        <div>
+            <input type="text" placeholder="Components" class="input">
+        </div>
+        <div>
+            <input type="text" placeholder="Duration" class="input">
+        </div>
+        <div>
+            <input type="text" placeholder="Description" class="input">
+        </div>
+        <div>
+            <input type="text" placeholder="Higher Level" class="input">
+        </div>
+        <div class="center">
+            <button>Save</button>
+        </div>
+    </form>
+
+</section>
+
+</body>
