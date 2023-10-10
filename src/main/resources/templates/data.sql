@@ -1,32 +1,27 @@
 use db.name
 
-
-
-CREATE TABLE spell (
-    id INTEGER IDENTITY PRIMARY KEY,
-    [name] VARCHAR(11),
-    description TEXT,
-    in_game INTEGER,
-    )
-  COMMIT
+CREATE TABLE spell
+(id INTEGER IDENTITY PRIMARY KEY,
+[name] VARCHAR (11),
+description TEXT,
+in_game INTEGER,
+)
 GO
 
-SET IDENTITY_INSERT [spell] ON
-GO
-INSERT INTO [spell] ([id], [name],[description],[in_game])
+INSERT INTO [spell] ( [name],[description],[in_game])
 values
-(1, 'barbarian', '',0),
-(2, 'bard' ,'Whether scholar, skald, or scoundrel, a bard weaves magic through words and music to inspire allies, demoralize foes, manipulate minds, create illusions, and even heal wounds. The bard is a master of song, speech, and the magic they contain.',1),
-(3, 'cleric', 'Clerics are intermediaries between the mortal world and the distant planes of the gods. As varied as the gods they serve, clerics strive to embody the handiwork of their deities. No ordinary priest, a cleric is imbued with divine magic.',1),
-(4, 'druid','Whether calling on the elemental forces of nature or emulating the creatures of the animal world, druids are an embodiment of natures resilience, cunning, and fury. They claim no mastery over nature, but see themselves as extensions of natures indomitable will.',1),
-(5, 'fighter','',0),
-(6, 'monk','',0),
-(7, 'paladin','	Whether sworn before a gods altar and the witness of a priest, in a sacred glade before nature spirits and fey beings, or in a moment of desperation and grief with the dead as the only witness, a paladins oath is a powerful bond.',1),
-(8, 'ranger','	Far from the bustle of cities and towns, past the hedges that shelter the most distant farms from the terrors of the wild, amid the dense-packed trees of trackless forests and across wide and empty plains, rangers keep their unending watch.',1),
-(9, 'rogue','',0),
-(10, 'sorcerer','	Sorcerers carry a magical birthright conferred upon them by an exotic bloodline, some otherworldly influence, or exposure to unknown cosmic forces. No one chooses sorcery; the power chooses the sorcerer.',1),
-(11, 'warlock','	Warlocks are seekers of the knowledge that lies hidden in the fabric of the multiverse. Through pacts made with mysterious beings of supernatural power, warlocks unlock magical effects both subtle and spectacular.',1),
-(12, 'wizard','	Wizards are supreme magic-users, defined and united as a class by the spells they cast. Drawing on the subtle weave of magic that permeates the cosmos, wizards cast spells of explosive fire, arcing lightning, subtle deception, brute-force mind control, and much more.',1);
+( 'barbarian', '',0),
+( 'bard' ,'Whether scholar, skald, or scoundrel, a bard weaves magic through words and music to inspire allies, demoralize foes, manipulate minds, create illusions, and even heal wounds. The bard is a master of song, speech, and the magic they contain.',1),
+( 'cleric', 'Clerics are intermediaries between the mortal world and the distant planes of the gods. As varied as the gods they serve, clerics strive to embody the handiwork of their deities. No ordinary priest, a cleric is imbued with divine magic.',1),
+( 'druid','Whether calling on the elemental forces of nature or emulating the creatures of the animal world, druids are an embodiment of natures resilience, cunning, and fury. They claim no mastery over nature, but see themselves as extensions of natures indomitable will.',1),
+( 'fighter', '',0),
+( 'monk','',0),
+( 'paladin','	Whether sworn before a gods altar and the witness of a priest, in a sacred glade before nature spirits and fey beings, or in a moment of desperation and grief with the dead as the only witness, a paladins oath is a powerful bond.',1),
+( 'ranger','	Far from the bustle of cities and towns, past the hedges that shelter the most distant farms from the terrors of the wild, amid the dense-packed trees of trackless forests and across wide and empty plains, rangers keep their unending watch.',1),
+( 'rogue','',0),
+( 'sorcerer','	Sorcerers carry a magical birthright conferred upon them by an exotic bloodline, some otherworldly influence, or exposure to unknown cosmic forces. No one chooses sorcery; the power chooses the sorcerer.',1),
+( 'warlock','	Warlocks are seekers of the knowledge that lies hidden in the fabric of the multiverse. Through pacts made with mysterious beings of supernatural power, warlocks unlock magical effects both subtle and spectacular.',1),
+( 'wizard','	Wizards are supreme magic-users, defined and united as a class by the spells they cast. Drawing on the subtle weave of magic that permeates the cosmos, wizards cast spells of explosive fire, arcing lightning, subtle deception, brute-force mind control, and much more.',1);
 
 
 create table dnd5_class_spells
@@ -34,7 +29,7 @@ create table dnd5_class_spells
     classId INTEGER NOT NULL,
     spellId INTEGER NOT NULL
 )
-INSERT INTO dnd5_class_spells (classId, spellId) VALUES
+    INSERT INTO dnd5_class_spells (classId, spellId) VALUES
 (2, 32),
 (10, 32),
 (11, 32),
@@ -889,7 +884,7 @@ CREATE TABLE dnd5_spells
     spell_range   varchar(128) NOT NULL,
     components    varchar(128) NOT NULL,
     duration      varchar(128) NOT NULL,
-    [description] text NOT NULL,
+    [description] text  NOT NULL,
     higher_levels text NOT NULL,
 )
 SET IDENTITY_INSERT [dnd5_spells] ON

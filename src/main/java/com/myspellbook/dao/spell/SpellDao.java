@@ -12,7 +12,7 @@ public interface SpellDao extends CrudRepository<DndSpells, Integer> {
     @Query(value = """
             select s.* 
             from dnd5_class_spells cs
-            join dnd_spells s on cs.spellId = s.spell_id
+            join dnd5_spells s on cs.spellId = s.spell_id
             where cs.classId = ?1
             order by s.spell_level
             """, nativeQuery = true)
