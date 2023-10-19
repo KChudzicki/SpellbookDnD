@@ -1,35 +1,40 @@
-use db.name
+db.name
 
 CREATE TABLE spell
-(id INTEGER IDENTITY PRIMARY KEY,
-[name] VARCHAR (11),
-description TEXT,
-in_game INTEGER,
-)
+(
+    id INTEGER IDENTITY PRIMARY KEY, [
+    name]
+    VARCHAR
+(
+    11
+),
+    description TEXT,
+    in_game INTEGER,
+    ) go
+SET IDENTITY_INSERT spell on
 GO
 
-INSERT INTO [spell] ( [name],[description],[in_game])
+INSERT INTO [spell] ( [id],[name],[description],[in_game])
 values
-( 'barbarian', '',0),
-( 'bard' ,'Whether scholar, skald, or scoundrel, a bard weaves magic through words and music to inspire allies, demoralize foes, manipulate minds, create illusions, and even heal wounds. The bard is a master of song, speech, and the magic they contain.',1),
-( 'cleric', 'Clerics are intermediaries between the mortal world and the distant planes of the gods. As varied as the gods they serve, clerics strive to embody the handiwork of their deities. No ordinary priest, a cleric is imbued with divine magic.',1),
-( 'druid','Whether calling on the elemental forces of nature or emulating the creatures of the animal world, druids are an embodiment of natures resilience, cunning, and fury. They claim no mastery over nature, but see themselves as extensions of natures indomitable will.',1),
-( 'fighter', '',0),
-( 'monk','',0),
-( 'paladin','	Whether sworn before a gods altar and the witness of a priest, in a sacred glade before nature spirits and fey beings, or in a moment of desperation and grief with the dead as the only witness, a paladins oath is a powerful bond.',1),
-( 'ranger','	Far from the bustle of cities and towns, past the hedges that shelter the most distant farms from the terrors of the wild, amid the dense-packed trees of trackless forests and across wide and empty plains, rangers keep their unending watch.',1),
-( 'rogue','',0),
-( 'sorcerer','	Sorcerers carry a magical birthright conferred upon them by an exotic bloodline, some otherworldly influence, or exposure to unknown cosmic forces. No one chooses sorcery; the power chooses the sorcerer.',1),
-( 'warlock','	Warlocks are seekers of the knowledge that lies hidden in the fabric of the multiverse. Through pacts made with mysterious beings of supernatural power, warlocks unlock magical effects both subtle and spectacular.',1),
-( 'wizard','	Wizards are supreme magic-users, defined and united as a class by the spells they cast. Drawing on the subtle weave of magic that permeates the cosmos, wizards cast spells of explosive fire, arcing lightning, subtle deception, brute-force mind control, and much more.',1);
+( 1,'barbarian', '',0),
+( 2, 'bard' ,'Whether scholar, skald, or scoundrel, a bard weaves magic through words and music to inspire allies, demoralize foes, manipulate minds, create illusions, and even heal wounds. The bard is a master of song, speech, and the magic they contain.',1),
+( 3,'cleric', 'Clerics are intermediaries between the mortal world and the distant planes of the gods. As varied as the gods they serve, clerics strive to embody the handiwork of their deities. No ordinary priest, a cleric is imbued with divine magic.',1),
+(4,'druid','Whether calling on the elemental forces of nature or emulating the creatures of the animal world, druids are an embodiment of natures resilience, cunning, and fury. They claim no mastery over nature, but see themselves as extensions of natures indomitable will.',1),
+( 5, 'fighter', '',0),
+(6, 'monk','',0),
+( 7, 'paladin','	Whether sworn before a gods altar and the witness of a priest, in a sacred glade before nature spirits and fey beings, or in a moment of desperation and grief with the dead as the only witness, a paladins oath is a powerful bond.',1),
+( 8,'ranger','	Far from the bustle of cities and towns, past the hedges that shelter the most distant farms from the terrors of the wild, amid the dense-packed trees of trackless forests and across wide and empty plains, rangers keep their unending watch.',1),
+( 9,'rogue','',0),
+( 10,'sorcerer','	Sorcerers carry a magical birthright conferred upon them by an exotic bloodline, some otherworldly influence, or exposure to unknown cosmic forces. No one chooses sorcery; the power chooses the sorcerer.',1),
+( 11,'warlock','	Warlocks are seekers of the knowledge that lies hidden in the fabric of the multiverse. Through pacts made with mysterious beings of supernatural power, warlocks unlock magical effects both subtle and spectacular.',1),
+( 12,'wizard','	Wizards are supreme magic-users, defined and united as a class by the spells they cast. Drawing on the subtle weave of magic that permeates the cosmos, wizards cast spells of explosive fire, arcing lightning, subtle deception, brute-force mind control, and much more.',1);
 
 
 create table dnd5_class_spells
 (
     classId INTEGER NOT NULL,
     spellId INTEGER NOT NULL
-)
-    INSERT INTO dnd5_class_spells (classId, spellId) VALUES
+) INSERT INTO dnd5_class_spells (classId, spellId) VALUES
 (2, 32),
 (10, 32),
 (11, 32),
@@ -883,11 +888,13 @@ CREATE TABLE dnd5_spells
     casting_time  varchar(128) NOT NULL,
     spell_range   varchar(128) NOT NULL,
     components    varchar(128) NOT NULL,
-    duration      varchar(128) NOT NULL,
-    [description] text  NOT NULL,
-    higher_levels text NOT NULL,
-)
-SET IDENTITY_INSERT [dnd5_spells] ON
+    duration      varchar(128) NOT NULL, [
+    description]
+    text
+    NOT
+    NULL,
+    higher_levels text         NOT NULL,
+) SET IDENTITY_INSERT [dnd5_spells] ON
 GO
 
  INSERT INTO dnd5_spells (spell_id, spell_name, spell_level, spell_type, casting_time, spell_range, components, duration, [description], higher_levels) VALUES
@@ -1007,7 +1014,8 @@ GO
 (114, 'Elemental Weapon', 3, '3rd-level transmutation', '1 action', 'Touch', 'V, S', 'Concentration, up to 1 hour', 'A nonmagical weapon touched when you cast this spell becomes magical. It gets a +1 bonus on attack rolls and deals an extra 1d4 damage on hit of your choice of acid, cold, fire, lightning, or thunder damage.', 'When a 5th or 6th level slot is used for this spell, the attack bonus is +2 and the damage is +2d4. A 7th level or higher slot grants+3 to hit and +3d4 to damage.'),
 (115, 'Enhance Ability', 2, '2nd-level transmutation', '1 action', 'Touch', 'V, S, M (fur or a feather from a beast)', 'Concentration, up to 1 hour', 'The touched creature gains Advantage on one type of ability check for the duration.', 'You can target one additional creature for every slot above 2nd level used to cast this spell.'),
 (116, 'Enlarge/Reduce', 2, '2nd-level transmutation', '1 action', '30 feet', 'V, S, M (a pinch of powdered iron)', 'Concentration, up to 1 minute', 'The target is enlarged or reduced by one size category for the duration. If Enlarged, its weapon attacks deal an extra 1d4 damage and has advantage on Strength checks and saving throws. If Reduced, its weapon attacks deal 1d4 less damage and has disadvantage on Strength saves and checks.<br>An unwilling target gets a Constitution saving throw to resist the effects of this spell.', '');
-INSERT INTO dnd5_spells (spell_id, spell_name, spell_level, spell_type, casting_time, spell_range, components, duration, [description], higher_levels)
+INSERT INTO dnd5_spells (spell_id, spell_name, spell_level, spell_type, casting_time, spell_range, components,
+                         duration, [description], higher_levels)
 VALUES (117, 'Ensnaring Strike', 1, '1st-level conjuration', '1 bonus action', 'Self', 'V',
         'Concentration, up to 1 minute',
         'A writhing mass of thorny vines appear when you next strike with a weapon. The target must make a Strength saving throw or is restrained by the vines for the duration. While restrained, the target takes 1d6 piercing damage at the start of its turn. A restrained creature can spend an action to attempt a Strength check to break free of the vines.',
@@ -1441,7 +1449,8 @@ VALUES (117, 'Ensnaring Strike', 1, '1st-level conjuration', '1 bonus action', '
         'V, S, M (a tiny silver whistle, a piece of bone, and a thread)', '8 hours',
         'You summon a phantom watchdog. Whenever a creature comes within 30 feet of it without speaking a designated password the hound starts barking loudly. The hound sees invisible creatures and even into the Ethereal Plane, and it ignores illusions. The hound can attempt to bite on your turn. It''s attack bonus is your spellcasting ability modifier + your proficiency bonus. On a hit it deals 4d8 piercing damage.',
         '');
-INSERT INTO dnd5_spells (spell_id, spell_name, spell_level, spell_type, casting_time, spell_range, components, duration, [description], higher_levels)
+INSERT INTO dnd5_spells (spell_id, spell_name, spell_level, spell_type, casting_time, spell_range, components,
+                         duration, [description], higher_levels)
 VALUES (236, 'Mordenkainen''s Magnificent Mansion', 7, '7th-level conjuration', '1 minute', '300 feet',
         'V, S, M (a mini portal carved from ivory, polished marble, and a tiny silver spoon)', '24 hours',
         'You create an extradimensional dwelling, complete with near-transparent servants and a banquet of food fit for up to 100 people. ',
@@ -1883,7 +1892,8 @@ VALUES (236, 'Mordenkainen''s Magnificent Mansion', 7, '7th-level conjuration', 
        (356, 'Wish', 9, '9th-level conjuration', '1 action', 'Self', 'V', 'Instantaneous',
         'You can use this to create any spell effect of 8th level or lower; create a nonmagical object worth up to 25,000 gp appear; up to 20 creatures are fully healed; 10 creatures get resistance to one damage type; 10 creatures get immunity to a single spell effect; or undo a single recent event.<br>Casting this spell takes a massive toll on the caster. Each spell you cast before a long rest deals 1d10 necrotic damage per level to you. Your Strength score also drops to 3 for 2d4 days.',
         '');
-INSERT INTO dnd5_spells (spell_id, spell_name, spell_level, spell_type, casting_time, spell_range, components, duration, [description], higher_levels)
+INSERT INTO dnd5_spells (spell_id, spell_name, spell_level, spell_type, casting_time, spell_range, components,
+                         duration, [description], higher_levels)
 VALUES (357, 'Witch Bolt', 1, '1st-level evocation', '1 action', '30 feet',
         'V, S, M (a twig from a tree that has been struck by lightning)', 'Concentration, up to 1 minute',
         'Make a ranged spell attack against a target within range. On a hit, the target takes 1d12 lightning damage. As an action on each of your turns for the duration you can deal another 1d12 lightning damage to the target as long as it stays within range. ',
@@ -1909,10 +1919,4 @@ ALTER TABLE dbo.dnd5_class_spells
 ALTER TABLE dbo.dnd5_class_spells
     ADD CONSTRAINT FK_dbo_dnd5_class_spells FOREIGN KEY (spellId)
         REFERENCES dbo.dnd5_spells (spell_id)
-    GO
-ALTER TABLE dbo.spell DROP CONSTRAINT FK_dbo_dnd5_class_spells
-    GO
-ALTER TABLE Forum.Topics
-    ADD CONSTRAINT FK_Topics_ParentID FOREIGN KEY (ParentID)
-        REFERENCES Forum.Topics (ID)
     GO
