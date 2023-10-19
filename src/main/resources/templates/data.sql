@@ -1,4 +1,4 @@
-db.name
+use db.name
 
 CREATE TABLE spell
 (
