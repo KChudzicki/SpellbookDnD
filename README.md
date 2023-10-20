@@ -20,6 +20,11 @@ Uruchmianie aplikacji
 2. Przed uruchomieniem aplikacji nalezy uzupełnic dane połączenia z bazą danych  /src/main/resources/application.properties. nalezy uzupełnic nastepujące pola: db.name gdzie należy podac nazwe bazy danych, db.user gdzie należy podać swoją nazwe uzytkownika oraz db.pass gdzie należy podac swoje hasło.
 3. Po wypełnieniu danych do połączenia, należy uruchomic aplkiacje "MySpellBookApplication".
 
+Tworzenie tabel 
+
+1.plik z kodem sql znajduje sie w folderze /src/main/resources/
+2 tabele mozna utworzyc w aplikaci intelij po polaczeniu z baza danych, jak i mozna skopiowac kod oraz użyć do tego aplkacji np. microsoft sql server 
+
 Poruszanie się po aplikacji 
 
 1. Uruchomić w przeglądarce "//localhost:(numer portu na ktrórym została uruchomiona aplikacjia)".
